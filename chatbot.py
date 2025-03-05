@@ -15,7 +15,7 @@ if 'messages' not in st.session_state:
 for message in st.session_state.messages:
     st.chat_message(message['role']).markdown(message['content'])
 
-prompt = st.chat_input("prompt = st.chat_input('💬 Ask your any question here...'")
+prompt = st.chat_input("💬 Ask your any question here...")
 
 if prompt:
     st.chat_message("user").markdown(prompt)
