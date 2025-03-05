@@ -6,7 +6,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 load_dotenv()
 
-st.title("RAG Chatbot!")
+st.title("🤖 Chatbot!")
+
 
 if 'messages' not in st.session_state:
     st.session_state.messages =[]
@@ -14,7 +15,7 @@ if 'messages' not in st.session_state:
 for message in st.session_state.messages:
     st.chat_message(message['role']).markdown(message['content'])
 
-prompt = st.chat_input("pass your prompt here!")
+prompt = st.chat_input("prompt = st.chat_input('💬 Ask your any question here...'")
 
 if prompt:
     st.chat_message("user").markdown(prompt)
@@ -25,7 +26,6 @@ if prompt:
     You are very smart at everything, you always. Anwer the following question: {user_prompt}
     """)
 
-    #GROQ_API_KEY="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"
     GROQ_API_KEY=os.environ.get("GROQ_API_KEY")
     #print(GROQ_API_KEY)
     
